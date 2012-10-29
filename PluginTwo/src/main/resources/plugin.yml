@@ -1,0 +1,27 @@
+# This is a sample plugin.yml
+# For more information refer to http://wiki.bukkit.org/Plugin_YAML
+main: edu.unca.jderbysh.PluginTwo.PluginTwo
+name: ${project.name}
+version: ${project.version}
+author: SampleAuthor
+description: ${project.description}
+commands:
+  plugintwo:
+    description: the base command initializer for this plug in.  
+    usage: plugintwo /<command>
+    permission: plugintwo.*
+permissions:
+  plugintwo.*:
+    description: gives all permissions of the PluginTwo, hopefully.
+    default: true
+    children:
+      plugintwo.message:
+        description: gives permission to set the sample message using the sample command
+      plugintwo.equip:
+        description: gives permission to equip yourself for battle!
+      plugintwo.chicken:
+        description: gives permission for you to summon a chicken!
+      plugintwo.science:
+        description: gives permission for you to do some redstone science!
+      plugintwo.mountain:
+        description: gives permission for you to create a mountain where you stand.
